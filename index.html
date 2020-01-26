@@ -180,8 +180,24 @@
     <p class="setup-similar-label">Петр Петров</p>
   </div>
 </template>
-
+<script>
+  'use strict';
+  var fireballSize = 22; // eslint-disable-line
+  var getFireballSpeed = function (left) { // eslint-disable-line
+  return left ? 5 : 2;
+  };
+  var wizardSpeed = 3; // eslint-disable-line
+  var wizardWidth = 70;
+  var getWizardHeight = function () {
+  return 1.337 * wizardWidth;
+  };
+  var getWizardX = function (width) { // eslint-disable-line
+  return 0.5 * (width - wizardWidth);
+  };
+  var getWizardY = function (height) { // eslint-disable-line
+  return (height * 0.3333) - getWizardHeight();
+  };
+</script>
 <script src="js/game.js"></script>
-
 </body>
 </html>
